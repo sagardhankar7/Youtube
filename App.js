@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client"
 
 const App = () => {
   return (
-    <div>Youtube</div>
+    <div className='font-bold'>Youtube</div>
   )
 }
 

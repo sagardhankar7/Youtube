@@ -729,6 +729,7 @@ var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
 const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "font-bold",
         children: "Youtube"
     }, void 0, false, {
         fileName: "App.js",
