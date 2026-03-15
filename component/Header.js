@@ -12,7 +12,7 @@ const Header = () => {
     return (
         <div className="flex justify-between shadow-lg">
             <div className="flex items-center">
-                <div onClick={()=>handleToggleMenu()}>
+                <div onClick={()=>handleToggleMenu()} className="cursor-pointer">
                     <img className="w-6" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/250px-Hamburger_icon.svg.png"></img>
                 </div>
                 <div>

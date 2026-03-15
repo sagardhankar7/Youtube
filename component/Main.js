@@ -1,6 +1,11 @@
+import ButtonList from "./ButtonList";
+
 const Main = () => {
     return (
-        <div>Main</div>
+        <div>
+            <ButtonList />
+            Main container
+        </div>
     )
 }
 
