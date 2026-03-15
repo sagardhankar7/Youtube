@@ -9,8 +9,9 @@ const VideoCard = ({info}) => {
 
 
   return (
-    <div className='w-48 bg-gray-100 shadow-lg rounded-lg'>
-        <img src={thumbnails.medium.url}></img>
+    <div className='w-48 bg-gray-100 shadow-lg rounded-lg mr-8 mb-5 p-3'>
+        {/* <img className='w-44 h-44 rounded-full object-cover' src={thumbnails.medium.url}></img> */}
+        <img className='w-44 h-44 rounded-full object-cover' src="https://placehold.co/400"></img>
         <ul>
             <li className='truncate w-44'>{title}</li>
             <li>{channelTitle}</li>
