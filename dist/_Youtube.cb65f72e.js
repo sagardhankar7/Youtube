@@ -25355,7 +25355,15 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRedux = require("react-redux");
+var _s = $RefreshSig$();
 const Sidebar = ()=>{
+    _s();
+    // Subscribing to the Redux Global Store
+    // // to specific portion of the store
+    const isOpenMenu = (0, _reactRedux.useSelector)((store)=>store.app.isOpenMenu);
+    // early return
+    if (!isOpenMenu) return null;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "w-48 shadow-lg",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -25364,42 +25372,47 @@ const Sidebar = ()=>{
                     children: "Home"
                 }, void 0, false, {
                     fileName: "component/Sidebar.js",
-                    lineNumber: 5,
+                    lineNumber: 13,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                     children: "Music"
                 }, void 0, false, {
                     fileName: "component/Sidebar.js",
-                    lineNumber: 6,
+                    lineNumber: 14,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                     children: "Live"
                 }, void 0, false, {
                     fileName: "component/Sidebar.js",
-                    lineNumber: 7,
+                    lineNumber: 15,
                     columnNumber: 17
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                     children: "Explore"
                 }, void 0, false, {
                     fileName: "component/Sidebar.js",
-                    lineNumber: 8,
+                    lineNumber: 16,
                     columnNumber: 17
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "component/Sidebar.js",
-            lineNumber: 4,
+            lineNumber: 12,
             columnNumber: 13
         }, undefined)
     }, void 0, false, {
         fileName: "component/Sidebar.js",
-        lineNumber: 3,
+        lineNumber: 11,
         columnNumber: 9
     }, undefined);
 };
+_s(Sidebar, "UUppEd8lhU4/o6VusuMtmAcBkQ8=", false, function() {
+    return [
+        (0, _reactRedux.useSelector)
+    ];
+});
 _c = Sidebar;
 exports.default = Sidebar;
 var _c;
@@ -25410,7 +25423,7 @@ $RefreshReg$(_c, "Sidebar");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"kmfTV":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react-redux":"hbNxT"}],"kmfTV":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _toolkit = require("@reduxjs/toolkit");
