@@ -19751,7 +19751,16 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRedux = require("react-redux");
+var _appSlice = require("../utils/appSlice");
+var _s = $RefreshSig$();
 const Header = ()=>{
+    _s();
+    // dispatch an action
+    const dispatch = (0, _reactRedux.useDispatch)();
+    const handleToggleMenu = ()=>{
+        dispatch((0, _appSlice.actionToggleMenu)());
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "flex justify-between shadow-lg",
         children: [
@@ -19759,17 +19768,18 @@ const Header = ()=>{
                 className: "flex items-center",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        onClick: ()=>handleToggleMenu(),
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                             className: "w-6",
                             src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/250px-Hamburger_icon.svg.png"
                         }, void 0, false, {
                             fileName: "component/Header.js",
-                            lineNumber: 6,
+                            lineNumber: 16,
                             columnNumber: 21
                         }, undefined)
                     }, void 0, false, {
                         fileName: "component/Header.js",
-                        lineNumber: 5,
+                        lineNumber: 15,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -19778,18 +19788,18 @@ const Header = ()=>{
                             src: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/youtube-logo-icon.png"
                         }, void 0, false, {
                             fileName: "component/Header.js",
-                            lineNumber: 9,
+                            lineNumber: 19,
                             columnNumber: 21
                         }, undefined)
                     }, void 0, false, {
                         fileName: "component/Header.js",
-                        lineNumber: 8,
+                        lineNumber: 18,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "component/Header.js",
-                lineNumber: 4,
+                lineNumber: 14,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -19800,7 +19810,7 @@ const Header = ()=>{
                         type: "text"
                     }, void 0, false, {
                         fileName: "component/Header.js",
-                        lineNumber: 13,
+                        lineNumber: 23,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -19809,18 +19819,18 @@ const Header = ()=>{
                             src: "https://static.vecteezy.com/system/resources/thumbnails/020/120/837/small/search-icon-simple-style-web-searching-background-symbol-search-brand-logo-design-element-search-t-shirt-printing-for-sticker-free-vector.jpg"
                         }, void 0, false, {
                             fileName: "component/Header.js",
-                            lineNumber: 14,
+                            lineNumber: 24,
                             columnNumber: 25
                         }, undefined)
                     }, void 0, false, {
                         fileName: "component/Header.js",
-                        lineNumber: 14,
+                        lineNumber: 24,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "component/Header.js",
-                lineNumber: 12,
+                lineNumber: 22,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -19829,21 +19839,26 @@ const Header = ()=>{
                     src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSLU5_eUUGBfxfxRd4IquPiEwLbt4E_6RYMw&s"
                 }, void 0, false, {
                     fileName: "component/Header.js",
-                    lineNumber: 17,
+                    lineNumber: 27,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "component/Header.js",
-                lineNumber: 16,
+                lineNumber: 26,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "component/Header.js",
-        lineNumber: 3,
+        lineNumber: 13,
         columnNumber: 9
     }, undefined);
 };
+_s(Header, "rgTLoBID190wEKCp9+G8W6F7A5M=", false, function() {
+    return [
+        (0, _reactRedux.useDispatch)
+    ];
+});
 _c = Header;
 exports.default = Header;
 var _c;
@@ -19854,149 +19869,7 @@ $RefreshReg$(_c, "Header");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"6mTVD":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$84d9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$84d9.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$84d9.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _main = require("./Main");
-var _mainDefault = parcelHelpers.interopDefault(_main);
-var _sidebar = require("./Sidebar");
-var _sidebarDefault = parcelHelpers.interopDefault(_sidebar);
-const Body = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarDefault.default), {}, void 0, false, {
-                fileName: "component/Body.js",
-                lineNumber: 7,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainDefault.default), {}, void 0, false, {
-                fileName: "component/Body.js",
-                lineNumber: 8,
-                columnNumber: 13
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "component/Body.js",
-        lineNumber: 6,
-        columnNumber: 9
-    }, undefined);
-};
-_c = Body;
-exports.default = Body;
-var _c;
-$RefreshReg$(_c, "Body");
-
-  $parcel$ReactRefreshHelpers$84d9.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./Main":"7tsqU","./Sidebar":"Ys9ta"}],"7tsqU":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$6444 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$6444.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$6444.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Main = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: "Main"
-    }, void 0, false, {
-        fileName: "component/Main.js",
-        lineNumber: 3,
-        columnNumber: 9
-    }, undefined);
-};
-_c = Main;
-exports.default = Main;
-var _c;
-$RefreshReg$(_c, "Main");
-
-  $parcel$ReactRefreshHelpers$6444.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"Ys9ta":[function(require,module,exports,__globalThis) {
-var $parcel$ReactRefreshHelpers$0310 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-$parcel$ReactRefreshHelpers$0310.init();
-var prevRefreshReg = globalThis.$RefreshReg$;
-var prevRefreshSig = globalThis.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0310.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Sidebar = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "w-48 shadow-lg",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    children: "Home"
-                }, void 0, false, {
-                    fileName: "component/Sidebar.js",
-                    lineNumber: 5,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    children: "Music"
-                }, void 0, false, {
-                    fileName: "component/Sidebar.js",
-                    lineNumber: 6,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    children: "Live"
-                }, void 0, false, {
-                    fileName: "component/Sidebar.js",
-                    lineNumber: 7,
-                    columnNumber: 17
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                    children: "Explore"
-                }, void 0, false, {
-                    fileName: "component/Sidebar.js",
-                    lineNumber: 8,
-                    columnNumber: 17
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "component/Sidebar.js",
-            lineNumber: 4,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false, {
-        fileName: "component/Sidebar.js",
-        lineNumber: 3,
-        columnNumber: 9
-    }, undefined);
-};
-_c = Sidebar;
-exports.default = Sidebar;
-var _c;
-$RefreshReg$(_c, "Sidebar");
-
-  $parcel$ReactRefreshHelpers$0310.postlude(module);
-} finally {
-  globalThis.$RefreshReg$ = prevRefreshReg;
-  globalThis.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"hbNxT":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","react-redux":"hbNxT","../utils/appSlice":"eo6s6"}],"hbNxT":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Provider", ()=>Provider_default);
@@ -20999,20 +20872,27 @@ module.exports = require("374a059340689e89");
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
 })();
 
-},{"8b38fc6c74f16e20":"jMk1U"}],"kmfTV":[function(require,module,exports,__globalThis) {
+},{"8b38fc6c74f16e20":"jMk1U"}],"eo6s6":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "actionToggleMenu", ()=>actionToggleMenu);
 var _toolkit = require("@reduxjs/toolkit");
-var _appSlice = require("./appSlice");
-var _appSliceDefault = parcelHelpers.interopDefault(_appSlice);
-const store = (0, _toolkit.configureStore)({
-    reducer: {
-        app: (0, _appSliceDefault.default)
+const appSlice = (0, _toolkit.createSlice)({
+    name: "app",
+    initialState: {
+        isOpenMenu: true
+    },
+    reducers: {
+        actionToggleMenu: (state)=>{
+            // doesnot have any payload, it needs only state info
+            state.isOpenMenu = state.isOpenMenu == true ? false : true;
+        }
     }
 });
-exports.default = store;
+exports.default = appSlice.reducer;
+const { actionToggleMenu } = appSlice.actions;
 
-},{"@reduxjs/toolkit":"fKS5f","./appSlice":"eo6s6","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"fKS5f":[function(require,module,exports,__globalThis) {
+},{"@reduxjs/toolkit":"fKS5f","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"fKS5f":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ReducerType", ()=>ReducerType);
@@ -25388,25 +25268,161 @@ function createThunkMiddleware(extraArgument) {
 var thunk = createThunkMiddleware();
 var withExtraArgument = createThunkMiddleware;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"eo6s6":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"6mTVD":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$84d9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$84d9.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$84d9.prelude(module);
+
+try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "toggleMenu", ()=>toggleMenu);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _main = require("./Main");
+var _mainDefault = parcelHelpers.interopDefault(_main);
+var _sidebar = require("./Sidebar");
+var _sidebarDefault = parcelHelpers.interopDefault(_sidebar);
+const Body = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarDefault.default), {}, void 0, false, {
+                fileName: "component/Body.js",
+                lineNumber: 7,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainDefault.default), {}, void 0, false, {
+                fileName: "component/Body.js",
+                lineNumber: 8,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "component/Body.js",
+        lineNumber: 6,
+        columnNumber: 9
+    }, undefined);
+};
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$84d9.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./Main":"7tsqU","./Sidebar":"Ys9ta"}],"7tsqU":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$6444 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$6444.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$6444.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Main = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: "Main"
+    }, void 0, false, {
+        fileName: "component/Main.js",
+        lineNumber: 3,
+        columnNumber: 9
+    }, undefined);
+};
+_c = Main;
+exports.default = Main;
+var _c;
+$RefreshReg$(_c, "Main");
+
+  $parcel$ReactRefreshHelpers$6444.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"Ys9ta":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$0310 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+$parcel$ReactRefreshHelpers$0310.init();
+var prevRefreshReg = globalThis.$RefreshReg$;
+var prevRefreshSig = globalThis.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0310.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Sidebar = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "w-48 shadow-lg",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: "Home"
+                }, void 0, false, {
+                    fileName: "component/Sidebar.js",
+                    lineNumber: 5,
+                    columnNumber: 17
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: "Music"
+                }, void 0, false, {
+                    fileName: "component/Sidebar.js",
+                    lineNumber: 6,
+                    columnNumber: 17
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: "Live"
+                }, void 0, false, {
+                    fileName: "component/Sidebar.js",
+                    lineNumber: 7,
+                    columnNumber: 17
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                    children: "Explore"
+                }, void 0, false, {
+                    fileName: "component/Sidebar.js",
+                    lineNumber: 8,
+                    columnNumber: 17
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "component/Sidebar.js",
+            lineNumber: 4,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false, {
+        fileName: "component/Sidebar.js",
+        lineNumber: 3,
+        columnNumber: 9
+    }, undefined);
+};
+_c = Sidebar;
+exports.default = Sidebar;
+var _c;
+$RefreshReg$(_c, "Sidebar");
+
+  $parcel$ReactRefreshHelpers$0310.postlude(module);
+} finally {
+  globalThis.$RefreshReg$ = prevRefreshReg;
+  globalThis.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"kmfTV":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
 var _toolkit = require("@reduxjs/toolkit");
-const appSlice = (0, _toolkit.createSlice)({
-    name: "app",
-    initialState: {
-        isOpenMenu: true
-    },
-    reducers: {
-        toggleMenu: (state)=>{
-            state.isOpenMenu = state.isOpenMenu == true ? false : true;
-        }
+var _appSlice = require("./appSlice");
+var _appSliceDefault = parcelHelpers.interopDefault(_appSlice);
+const store = (0, _toolkit.configureStore)({
+    reducer: {
+        app: (0, _appSliceDefault.default)
     }
 });
-exports.default = appSlice.reducer;
-const { toggleMenu } = appSlice.actions;
+exports.default = store;
 
-},{"@reduxjs/toolkit":"fKS5f","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["icAAj","blcJa"], "blcJa", "parcelRequirec9fe", {}, null, null, "http://localhost:1234")
+},{"@reduxjs/toolkit":"fKS5f","./appSlice":"eo6s6","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["icAAj","blcJa"], "blcJa", "parcelRequirec9fe", {}, null, null, "http://localhost:1234")
 
 //# sourceMappingURL=_Youtube.cb65f72e.js.map

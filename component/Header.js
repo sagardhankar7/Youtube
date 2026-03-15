@@ -1,8 +1,18 @@
+import { useDispatch } from "react-redux"
+import { actionToggleMenu } from "../utils/appSlice";
+
 const Header = () => {
+    
+    // dispatch an action
+    const dispatch = useDispatch();
+    
+    const handleToggleMenu = () => {
+        dispatch(actionToggleMenu())
+    }
     return (
         <div className="flex justify-between shadow-lg">
             <div className="flex items-center">
-                <div>
+                <div onClick={()=>handleToggleMenu()}>
                     <img className="w-6" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/250px-Hamburger_icon.svg.png"></img>
                 </div>
                 <div>
