@@ -5,10 +5,22 @@ import Body from './component/Body'
 import { Provider } from 'react-redux'
 import store from './utils/store'
 import { createBrowserRouter, RouterProvider } from 'react-router'
+import Main from './component/Main'
+import Watch from './component/Watch'
 
 const bodyRouter = createBrowserRouter([{
     path: "/",
-    element: <Body />
+    element: <Body />,
+    children: [
+        {
+            path: "/",
+            element: <Main />
+        },
+        {
+            path: "watch",
+            element: <Watch />
+        }
+    ]
 }])
 
 const App = () => {
