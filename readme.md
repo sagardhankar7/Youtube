@@ -7,3 +7,5 @@ Redux Store (Global State Handler :- Like Sidebar can be collapsed from any comp
 
 (how to create a store) create a file store.js in utils folder using API createStore 
 (then create a slice for sidebar) create a file sidebarSlice.js in utils folder using API createSlice
+
+install react-router

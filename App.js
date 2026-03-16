@@ -4,6 +4,12 @@ import Header from './component/Header'
 import Body from './component/Body'
 import { Provider } from 'react-redux'
 import store from './utils/store'
+import { createBrowserRouter, RouterProvider } from 'react-router'
+
+const bodyRouter = createBrowserRouter([{
+    path: "/",
+    element: <Body />
+}])
 
 const App = () => {
   return (
@@ -12,7 +18,7 @@ const App = () => {
     <Provider store={store}>
         <div>
             <Header />
-            <Body />
+            <RouterProvider router={bodyRouter} />
         </div>
     </Provider>
   )
