@@ -9,9 +9,12 @@ const appSlice = createSlice({
         actionToggleMenu: (state)=>{
             // doesnot have any payload, it needs only state info
             state.isOpenMenu = state.isOpenMenu==true? false: true;
+        },
+        actionCloseMenu: (state)=>{
+            state.isOpenMenu = false;
         }
     }
 })
 
 export default appSlice.reducer
-export const {actionToggleMenu} = appSlice.actions
+export const {actionToggleMenu, actionCloseMenu} = appSlice.actions
