@@ -9,3 +9,23 @@ Redux Store (Global State Handler :- Like Sidebar can be collapsed from any comp
 (then create a slice for sidebar) create a file sidebarSlice.js in utils folder using API createSlice
 
 install react-router
+
+npm uninstall parcel
+
+remove "scripts": {
+  "start": "parcel index.html",
+  "build": "parcel build index.html"
+}
+
+npm install vite @vitejs/plugin-react --save-dev
+
+Create vite.config.js
+Create this file in the root of your project.
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+export default defineConfig({
+  plugins: [react()],
+});
+
+npm run dev 
+To start the vite server
