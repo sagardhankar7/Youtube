@@ -5,6 +5,8 @@ import { YOUTUBE_SEARCH_API } from "../utils/constants";
 
 const Header = () => {
     const [searchQuery, setSearchQuery] = useState("")
+    const [searchSuggest, setSearchSuggest] = useState([])
+
     console.log(searchQuery)
     // dispatch an action
     const dispatch = useDispatch();
@@ -16,7 +18,7 @@ const Header = () => {
         // We will make api call
         const timer = setTimeout(() => {
             getSearchSuggests()
-        }, 3000);
+        }, 200);
 
         return()=>{
             // It is called when new useEffect called
@@ -28,6 +30,7 @@ const Header = () => {
         const data = await fetch(YOUTUBE_SEARCH_API+searchQuery)
         const json = await data.json()
         console.log(json[1])
+        setSearchSuggest(json[1])
     }
 
 
@@ -46,12 +49,13 @@ const Header = () => {
                     <input value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} className="border border-gray-200 px-5 py-1 rounded-2xl w-80" type="text"></input>
                     <div className="absolute my-1 p-2 w-80 rounded-2xl border border-gray-200 bg-white">
                         <ul>
-                            <li className="hover:bg-gray-200 px-2 rounded cursor-default">🔍Iphone</li>
-                            <li className="hover:bg-gray-200 px-2 rounded cursor-default">🔍Iphone pro</li>
-                            <li className="hover:bg-gray-200 px-2 rounded cursor-default">🔍Iphone pro</li>
-                            <li className="hover:bg-gray-200 px-2 rounded cursor-default">🔍Iphone Pro max</li>
-                            <li className="hover:bg-gray-200 px-2 rounded cursor-default">🔍Iphone Pro max</li>
-                    
+                            {
+                                searchSuggest.map((result)=>(
+                                    <li key={result} className="hover:bg-gray-200 px-2 rounded cursor-default">🔍{result}</li>
+
+                                ))
+                            }
+                            
                         </ul>
                     </div>
                 </div>
