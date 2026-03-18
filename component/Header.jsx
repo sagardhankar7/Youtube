@@ -6,6 +6,7 @@ import { YOUTUBE_SEARCH_API } from "../utils/constants";
 const Header = () => {
     const [searchQuery, setSearchQuery] = useState("")
     const [searchSuggest, setSearchSuggest] = useState([])
+    const [showSuggest, setShowSuggest] = useState(false)
 
     console.log(searchQuery)
     // dispatch an action
@@ -46,8 +47,8 @@ const Header = () => {
             </div>
             <div className="flex items-center">
                 <div className="relative">
-                    <input value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} className="border border-gray-200 px-5 py-1 rounded-2xl w-80" type="text"></input>
-                    <div className="absolute my-1 p-2 w-80 rounded-2xl border border-gray-200 bg-white">
+                    <input value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)} onFocus={()=>setShowSuggest(true)} onBlur={()=>setShowSuggest(false)}  className="border border-gray-200 px-5 py-1 rounded-2xl w-80" type="text"></input>
+                    {showSuggest && searchQuery && <div className="absolute my-1 p-2 w-80 rounded-2xl border border-gray-200 bg-white">
                         <ul>
                             {
                                 searchSuggest.map((result)=>(
@@ -57,7 +58,7 @@ const Header = () => {
                             }
                             
                         </ul>
-                    </div>
+                    </div>}
                 </div>
                 <button><img className="w-10" src="https://static.vecteezy.com/system/resources/thumbnails/020/120/837/small/search-icon-simple-style-web-searching-background-symbol-search-brand-logo-design-element-search-t-shirt-printing-for-sticker-free-vector.jpg"></img></button>
             </div>
