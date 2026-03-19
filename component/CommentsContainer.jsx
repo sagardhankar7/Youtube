@@ -56,11 +56,8 @@ const Comment = ({data}) => {
     </div>
 }
 
-const CommentsContainer = () => {
-  return (<div className="p-4">
-    <h1 className="text-2xl font-bold">Comments: </h1>
-
-    {commentData.map((comment,index)=>(
+const CommentList = ({commentData}) => {
+    return commentData.map((comment,index)=>(
         <div key={index}>
             <Comment data={comment}/>
             <div className="pl-4 border-l-2 border-black ml-2">
@@ -68,7 +65,15 @@ const CommentsContainer = () => {
                 <Comment data={comment} />
             </div>
         </div>
-    ))}
+    ))
+    
+}
+
+const CommentsContainer = () => {
+  return (<div className="p-4">
+    <h1 className="text-2xl font-bold">Comments: </h1>
+
+    <CommentList commentData={commentData}/>
   </div>)
 }
 
