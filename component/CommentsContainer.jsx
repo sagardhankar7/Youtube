@@ -61,7 +61,13 @@ const CommentsContainer = () => {
     <h1 className="text-2xl font-bold">Comments: </h1>
 
     {commentData.map((comment,index)=>(
-        <Comment key={index} data={comment}/>
+        <div key={index}>
+            <Comment data={comment}/>
+            <div className="pl-4 border-l-2 border-black ml-2">
+                <Comment data={comment} />
+                <Comment data={comment} />
+            </div>
+        </div>
     ))}
   </div>)
 }
