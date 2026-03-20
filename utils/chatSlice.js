@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { OFFSET_CHAT_MESSAGE } from "./constants";
 
 // Step: 1 
 const chatSlice = createSlice({
@@ -8,7 +9,8 @@ const chatSlice = createSlice({
     },
     reducers: {
         actionChatAdd: (state, action) =>{
-            state.messages.push(action.payload)
+            if(state.messages.length > OFFSET_CHAT_MESSAGE) state.messages.pop()
+            state.messages.unshift(action.payload)
         }
     }
 })
